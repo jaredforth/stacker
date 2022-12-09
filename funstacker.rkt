@@ -2,9 +2,9 @@
 
 (define (read-syntax path port)
   (define src-lines (port->lines port))
-  (define src-datums (format-datums '(handle ~a) src-lines))
-  (define module-datum `(module stacker-mod "funstacker.rkt"
-                          ,@src-datums))
+  (define src-datums (format-datums '~a src-lines))
+  (define module-datum `(module funstacker-mod "funstacker.rkt"
+                          (handle-args ,@src-datums)))
   (datum->syntax #f module-datum))
 (provide read-syntax)
 
