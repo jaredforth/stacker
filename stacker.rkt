@@ -7,3 +7,18 @@
                           ,@src-datums))
   (datum->syntax #f module-datum))
 (provide read-syntax)
+
+(define-macro (stacker-module-begin HANDLE-EXPR ...)
+  #'(#%module-begin
+     HANDLE-EXPR ...))
+(provide (rename-out [stacker-module-begin #%module-begin]))
+
+(define stack empty)
+
+(define (pop-stack!)
+  (define arg (first stack))
+  (set! stack (rest stack))
+  arg)
+
+(define (push-stack! arg)
+  (set! stack (cons arg stack)))
