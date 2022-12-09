@@ -30,3 +30,5 @@
      (define op-result (arg (pop-stack!) (pop-stack!)))
      (push-stack! op-result)]))
 (provide handle)
+
+(provide + *)
