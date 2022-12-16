@@ -20,7 +20,7 @@ You can then add integers and addition and multiplication operators like:
 *
 ```
 
-### Functional Rewrite 
+## Functional Rewrite 
 
 The program was rewritten in a functional paradigm in `funstacker` which can be used in the same way:
 
@@ -34,7 +34,7 @@ The program was rewritten in a functional paradigm in `funstacker` which can be 
 *
 ```
 
-### Stackerizer
+## Stackerizer
 
 `stackerizer` is a program that converts `stacker` code into S-expresssions and can be used:
 
